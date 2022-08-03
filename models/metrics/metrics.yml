@@ -13,7 +13,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_ads_by_ad_set
+- name: facebook_ads__monthly_ads_by_ad_set_name
   label: Facebook Ads Monthly Number of Ads Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Number of ads running monthly segmented by ad_set
@@ -24,7 +24,7 @@ metrics:
   filters: []
   dimensions: [ad_set_id]
 
-- name: facebook_ads__monthly_ads_by_campaign
+- name: facebook_ads__monthly_ads_by_campaign_name
   label: Facebook Ads Monthly Number of Ads Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Number of ads running monthly segmented by campaign
@@ -46,7 +46,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_ad_sets_by_campaign
+- name: facebook_ads__monthly_ad_sets_by_campaign_name
   label: Facebook Ads Monthly Number of ad_sets Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Number of ad_sets running monthly segmented by campaign
@@ -80,7 +80,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_impressions_by_ad
+- name: facebook_ads__monthly_impressions_by_ad_name
   label: Facebook Ads Monthly Number of Impressions Segmented By Ad
   model: ref('facebook_ads_main')
   description: Monthly impressions per ad 
@@ -91,7 +91,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_impressions_by_ad_set
+- name: facebook_ads__monthly_impressions_by_ad_set_name
   label: Facebook Ads Monthly Number of Impressions Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly impressions per ad 
@@ -102,7 +102,7 @@ metrics:
   filters: []
   dimensions: [ad__set_name]
 
-- name: facebook_ads__monthly_impressions_by_campaign
+- name: facebook_ads__monthly_impressions_by_campaign_name
   label: Facebook Ads Monthly Number of Impressions Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly impressions per ad 
@@ -124,7 +124,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_ad_clicks_by_ad
+- name: facebook_ads__monthly_ad_clicks_by_ad_name
   label: Facebook Ads Monthly Number of Ad Clicks Segmented By Ad
   model: ref('facebook_ads_main')
   description: Monthly clicks on an ad segmented by ad name
@@ -135,7 +135,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_ad_clicks_by_ad_set
+- name: facebook_ads__monthly_ad_clicks_by_ad_set_name
   label: Facebook Ads Monthly Number of Ad Clicks Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly clicks on an ad segmented by ad_set name
@@ -146,7 +146,7 @@ metrics:
   filters: []
   dimensions: [ad_set_name]
 
-- name: facebook_ads__monthly_ad_clicks_by_campaign
+- name: facebook_ads__monthly_ad_clicks_by_campaign_name
   label: Facebook Ads Monthly Number of Ad Clicks Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Monthly clicks on an ad segmented by campaign name
@@ -179,7 +179,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_ad_spend_by_ad
+- name: facebook_ads__monthly_ad_spend_by_ad_name
   label: Facebook Ads Monthly Expenditure For Ads Segmented By Ad
   model: ref('facebook_ads_main')
   description: Monthly spend on ads segmented by ad
@@ -190,7 +190,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_ad_spend_by_ad_set
+- name: facebook_ads__monthly_ad_spend_by_ad_set_name
   label: Facebook Ads Monthly Expenditure For Ads Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly spend on ads segmented by ad_set
@@ -201,7 +201,7 @@ metrics:
   filters: []
   dimensions: [ad_set_name]
 
-- name: facebook_ads__monthly_ad_spend_by_campaign
+- name: facebook_ads__monthly_ad_spend_by_campaign_name
   label: Facebook Ads Monthly Expenditure For Ads Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Monthly spend on ads segmented by campaign
@@ -223,7 +223,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_cost_per_click_by_ad
+- name: facebook_ads__monthly_cost_per_click_by_ad_name
   label: Facebook Ads Monthly Cost Per Ad Click Segmented By Ad
   model: ref('facebook_ads_main')
   description: Monthly cost per ad click segmented by ad name
@@ -234,7 +234,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_cost_per_click_by_ad_set
+- name: facebook_ads__monthly_cost_per_click_by_ad_set_name
   label: Facebook Ads Monthly Cost Per Ad Click Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly cost per ad click segmented by ad_set name
@@ -245,7 +245,7 @@ metrics:
   filters: []
   dimensions: [ad_set_name]
 
-- name: facebook_ads__monthly_cost_per_click_by_campaign
+- name: facebook_ads__monthly_cost_per_click_by_campaign_name
   label: Facebook Ads Monthly Cost Per Ad Click Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Monthly cost per ad click segmented by campaign name
@@ -267,7 +267,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_cost_per_impression_by_ad
+- name: facebook_ads__monthly_cost_per_impression_by_ad_name
   label: Facebook Ads Monthly Cost Per Ad Impression Segmented By Ad
   model: ref('facebook_ads_main')
   description: Monthly cost per ad impression segmented by ad
@@ -278,7 +278,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_cost_per_impression_by_ad_set
+- name: facebook_ads__monthly_cost_per_impression_by_ad_set_name
   label: Facebook Ads Monthly Cost Per Ad Impression Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly cost per ad impression segmented by ad_set
@@ -289,7 +289,7 @@ metrics:
   filters: []
   dimensions: [ad_set_name]
 
-- name: facebook_ads__monthly_cost_per_impression_by_campaign
+- name: facebook_ads__monthly_cost_per_impression_by_campaign_name
   label: Facebook Ads Monthly Cost Per Ad Impression Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Monthly cost per ad impression segmented by campaign
@@ -312,7 +312,7 @@ metrics:
   dimensions: []
 
 
-- name: facebook_ads__monthly_click_through_rate_by_ad
+- name: facebook_ads__monthly_click_through_rate_by_ad_name
   label: Facebook Ads Monthly Click Through Rate Segmented By Ad
   model: ref('facebook_ads_main')
   description: Monthly rate of users clicking on ad after viewing segmented by ad name
@@ -323,7 +323,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_click_through_rate_by_ad_set
+- name: facebook_ads__monthly_click_through_rate_by_ad_set_name
   label: Facebook Ads Monthly Click Through Rate Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly rate of users clicking on ad after viewing segmented by ad_set name
@@ -334,7 +334,7 @@ metrics:
   filters: []
   dimensions: [ad_set_name]
 
-- name: facebook_ads__monthly_click_through_rate_by_campaign
+- name: facebook_ads__monthly_click_through_rate_by_campaign_name
   label: Facebook Ads Monthly Click Through Rate Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Monthly rate of users clicking on ad after viewing segmented by campaign name
@@ -356,7 +356,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_conversions_by_ad
+- name: facebook_ads__monthly_conversions_by_ad_name
   label: Facebook Ads Monthly Number of Conversions Segmented By Ad
   model: ref('facebook_ads_main')
   description: Monthly number of ad conversions segmented by ad name
@@ -367,7 +367,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_conversions_by_ad_set
+- name: facebook_ads__monthly_conversions_by_ad_set_name
   label: Facebook Ads Monthly Number of Conversions Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly number of ad conversions segmented by ad_set name
@@ -378,7 +378,7 @@ metrics:
   filters: []
   dimensions: [ad_set_name]
 
-- name: facebook_ads__monthly_conversions_by_campaign
+- name: facebook_ads__monthly_conversions_by_campaign_name
   label: Facebook Ads Monthly Number of Conversions Segmented By Campaign
   model: ref('facebook_ads_main')
   description: Monthly number of ad conversions segmented by campaign name
@@ -400,7 +400,7 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_cost_per_conversion_by_ad
+- name: facebook_ads__monthly_cost_per_conversion_by_ad_name
   label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by Ad
   model: ref('facebook_ads_main')
   description: Monthly cost per ad conversion segmented by ad name
@@ -411,7 +411,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_cost_per_conversion_by_ad_set
+- name: facebook_ads__monthly_cost_per_conversion_by_ad_set_name
   label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by ad_set
   model: ref('facebook_ads_main')
   description: Monthly cost per ad conversion segmented by ad_set name
@@ -422,7 +422,7 @@ metrics:
   filters: []
   dimensions: [ad_set_name]
 
-- name: facebook_ads__monthly_cost_per_conversion_by_campaign
+- name: facebook_ads__monthly_cost_per_conversion_by_campaign_name
   label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by Campaign
   model: ref('facebook_ads_main')
   description: Monthly cost per ad conversion segmented by campaign name
