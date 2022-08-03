@@ -1,0 +1,435 @@
+version: 2
+sources: []
+models: []
+metrics:
+- name: facebook_ads__monthly_ads
+  label: Facebook Ads Monthly Number of Ads
+  model: ref('facebook_ads_main')
+  description: Number of ads running monthly
+  type: count
+  sql: ad_id
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_ads_by_ad_set_name
+  label: Facebook Ads Monthly Number of Ads Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Number of ads running monthly segmented by ad_set
+  type: count
+  sql: ad_id
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_id]
+
+- name: facebook_ads__monthly_ads_by_campaign_name
+  label: Facebook Ads Monthly Number of Ads Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Number of ads running monthly segmented by campaign
+  type: count
+  sql: ad_id
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_id]
+
+- name: facebook_ads__monthly_ad_sets
+  label: Facebook Ads Monthly Number of ad_sets
+  model: ref('facebook_ads_main')
+  description: Number of ad_sets running monthly
+  type: count_distinct
+  sql: ad_set_id
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_ad_sets_by_campaign_name
+  label: Facebook Ads Monthly Number of ad_sets Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Number of ad_sets running monthly segmented by campaign
+  type: count_distinct
+  sql: ad_set_id
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_id]
+
+
+- name: facebook_ads__monthly_campaigns
+  label: Facebook Ads Monthly Number of Campaigns
+  model: ref('facebook_ads_main')
+  description: Number of campaigns running monthly
+  type: count_distinct
+  sql: campaign_id
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_impressions
+  label: Facebook Ads Monthly Number of Impressions
+  model: ref('facebook_ads_main')
+  description: Monthly impressions per ad 
+  type: sum
+  sql: impressions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_impressions_by_ad_name
+  label: Facebook Ads Monthly Number of Impressions Segmented By Ad
+  model: ref('facebook_ads_main')
+  description: Monthly impressions per ad 
+  type: sum
+  sql: impressions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_impressions_by_ad_set_name
+  label: Facebook Ads Monthly Number of Impressions Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly impressions per ad 
+  type: sum
+  sql: impressions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad__set_name]
+
+- name: facebook_ads__monthly_impressions_by_campaign_name
+  label: Facebook Ads Monthly Number of Impressions Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly impressions per ad 
+  type: sum
+  sql: impressions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad__set_name]
+
+- name: facebook_ads__monthly_ad_clicks
+  label: Facebook Ads Monthly Number of Ad Clicks
+  model: ref('facebook_ads_main')
+  description: Monthly clicks on an ad
+  type: sum
+  sql: clicks
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_ad_clicks_by_ad_name
+  label: Facebook Ads Monthly Number of Ad Clicks Segmented By Ad
+  model: ref('facebook_ads_main')
+  description: Monthly clicks on an ad segmented by ad name
+  type: sum
+  sql: clicks
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_ad_clicks_by_ad_set_name
+  label: Facebook Ads Monthly Number of Ad Clicks Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly clicks on an ad segmented by ad_set name
+  type: sum
+  sql: clicks
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_name]
+
+- name: facebook_ads__monthly_ad_clicks_by_campaign_name
+  label: Facebook Ads Monthly Number of Ad Clicks Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Monthly clicks on an ad segmented by campaign name
+  type: sum
+  sql: clicks
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_name]
+
+- name: facebook_ads__monthly_ad_clicks_by_ad_link
+  label: Facebook Ads Monthly Number of Ad Clicks Segmented By Ad Link
+  model: ref('facebook_ads_main')
+  description: Monthly clicks on an ad segmented by ad link
+  type: sum
+  sql: clicks
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [template_page_link]
+
+- name: facebook_ads__monthly_ad_spend
+  label: Facebook Ads Monthly Expenditure For Ads
+  model: ref('facebook_ads_main')
+  description: Monthly spend on ads
+  type: sum
+  sql: spend
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_ad_spend_by_ad_name
+  label: Facebook Ads Monthly Expenditure For Ads Segmented By Ad
+  model: ref('facebook_ads_main')
+  description: Monthly spend on ads segmented by ad
+  type: sum
+  sql: spend
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_ad_spend_by_ad_set_name
+  label: Facebook Ads Monthly Expenditure For Ads Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly spend on ads segmented by ad_set
+  type: sum
+  sql: spend
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_name]
+
+- name: facebook_ads__monthly_ad_spend_by_campaign_name
+  label: Facebook Ads Monthly Expenditure For Ads Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Monthly spend on ads segmented by campaign
+  type: sum
+  sql: spend
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_name]
+
+- name: facebook_ads__monthly_cost_per_click
+  label: Facebook Ads Monthly Cost Per Ad Click
+  model: ref('facebook_ads_main')
+  description: cost per ad click
+  type: average
+  sql: cost_per_click
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_cost_per_click_by_ad_name
+  label: Facebook Ads Monthly Cost Per Ad Click Segmented By Ad
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad click segmented by ad name
+  type: average
+  sql: cost_per_click
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_cost_per_click_by_ad_set_name
+  label: Facebook Ads Monthly Cost Per Ad Click Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad click segmented by ad_set name
+  type: average
+  sql: cost_per_click
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_name]
+
+- name: facebook_ads__monthly_cost_per_click_by_campaign_name
+  label: Facebook Ads Monthly Cost Per Ad Click Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad click segmented by campaign name
+  type: average
+  sql: cost_per_click
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_name]
+
+- name: facebook_ads__monthly_cost_per_impression
+  label: Facebook Ads Monthly Cost Per Ad Impression
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad impression
+  type: average
+  sql: cost_per_impression
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_cost_per_impression_by_ad_name
+  label: Facebook Ads Monthly Cost Per Ad Impression Segmented By Ad
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad impression segmented by ad
+  type: average
+  sql: cost_per_impression
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_cost_per_impression_by_ad_set_name
+  label: Facebook Ads Monthly Cost Per Ad Impression Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad impression segmented by ad_set
+  type: average
+  sql: cost_per_impression
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_name]
+
+- name: facebook_ads__monthly_cost_per_impression_by_campaign_name
+  label: Facebook Ads Monthly Cost Per Ad Impression Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad impression segmented by campaign
+  type: average
+  sql: cost_per_impression
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_name]
+
+- name: facebook_ads__monthly_click_through_rate
+  label: Facebook Ads Monthly Click Through Rate
+  model: ref('facebook_ads_main')
+  description: Monthly rate of users clicking on ad after viewing
+  type: average
+  sql: click_through_rate
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+
+- name: facebook_ads__monthly_click_through_rate_by_ad_name
+  label: Facebook Ads Monthly Click Through Rate Segmented By Ad
+  model: ref('facebook_ads_main')
+  description: Monthly rate of users clicking on ad after viewing segmented by ad name
+  type: average
+  sql: click_through_rate
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_click_through_rate_by_ad_set_name
+  label: Facebook Ads Monthly Click Through Rate Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly rate of users clicking on ad after viewing segmented by ad_set name
+  type: average
+  sql: click_through_rate
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_name]
+
+- name: facebook_ads__monthly_click_through_rate_by_campaign_name
+  label: Facebook Ads Monthly Click Through Rate Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Monthly rate of users clicking on ad after viewing segmented by campaign name
+  type: average
+  sql: click_through_rate
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_name]
+
+- name: facebook_ads__monthly_conversions
+  label: Facebook Ads Monthly Number of Conversions
+  model: ref('facebook_ads_main')
+  description: Monthly number of ad conversions
+  type: sum
+  sql: number_of_conversions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_conversions_by_ad_name
+  label: Facebook Ads Monthly Number of Conversions Segmented By Ad
+  model: ref('facebook_ads_main')
+  description: Monthly number of ad conversions segmented by ad name
+  type: sum
+  sql: number_of_conversions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_conversions_by_ad_set_name
+  label: Facebook Ads Monthly Number of Conversions Segmented By ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly number of ad conversions segmented by ad_set name
+  type: sum
+  sql: number_of_conversions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_name]
+
+- name: facebook_ads__monthly_conversions_by_campaign_name
+  label: Facebook Ads Monthly Number of Conversions Segmented By Campaign
+  model: ref('facebook_ads_main')
+  description: Monthly number of ad conversions segmented by campaign name
+  type: sum
+  sql: number_of_conversions
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_name]
+
+- name: facebook_ads__monthly_cost_per_conversion
+  label: Facebook Ads Monthly Cost Per Ad Conversion
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad conversion
+  type: average
+  sql: cost_per_conversion
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: []
+
+- name: facebook_ads__monthly_cost_per_conversion_by_ad_name
+  label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by Ad
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad conversion segmented by ad name
+  type: average
+  sql: cost_per_conversion
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_name]
+
+- name: facebook_ads__monthly_cost_per_conversion_by_ad_set_name
+  label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by ad_set
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad conversion segmented by ad_set name
+  type: average
+  sql: cost_per_conversion
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [ad_set_name]
+
+- name: facebook_ads__monthly_cost_per_conversion_by_campaign_name
+  label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by Campaign
+  model: ref('facebook_ads_main')
+  description: Monthly cost per ad conversion segmented by campaign name
+  type: average
+  sql: cost_per_conversion
+  timestamp: date_day
+  time_grains: [month]
+  filters: []
+  dimensions: [campaign_name]
+

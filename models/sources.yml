@@ -1,0 +1,9 @@
+version: 2
+
+#define sources from where facebook ads data is to be fetched for computation
+sources:
+  - name: facebook_ads_source
+    database: "{{ var('facebook_ads_database', target.database) }}"
+    schema: "{{ var('facebook_ads_schema','fivetran_facebook_ads') }}"
+    tables:
+      - name: AD_CONVERSIONS ## including this table for calculating cost_per_conversion metric

@@ -1,0 +1,28 @@
+config-version: 2
+
+name: 'facebook_ads_metrics'
+version: '1.0.0'
+
+
+require-dbt-version: [">=1.0.0", "<2.0.0"]
+
+
+profile: 'facebook_ads_metrics'
+
+models:
+  facebook_ads_metrics:
+     +materialized: table
+
+vars:
+
+  facebook_ads_schema: TEST_FACEBOOK_ADS
+  facebook_ads_database: HOUSEWARE_HOUSEWARE
+  
+  facebook_ads_metrics:
+    account_history: "{{ ref('stg_facebook_ads__account_history') }}"
+    ad_history: "{{ ref('stg_facebook_ads__ad_history') }}"
+    ad_set_history: "{{ ref('stg_facebook_ads__ad_set_history') }}"
+    campaign_history: "{{ ref('stg_facebook_ads__campaign_history') }}"
+    basic_ad: "{{ ref('stg_facebook_ads__basic_ad') }}"
+    creative_history: "{{ ref('stg_facebook_ads__creative_history') }}"
+    
