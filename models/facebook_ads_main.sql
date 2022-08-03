@@ -22,20 +22,20 @@ with account_history as (
 ), ad_conversions as(
     select * from {{source('facebook_ads_source','AD_CONVERSIONS')}}
 ), source as ( 
-    select A.*, B.account_name, C.ad_set_name, D.campaign_name, E.impressions, E.clicks, E.spend, E.date_day, F.creative_name, F.template_page_link,
-    (select count(*) from ad_conversions where ad_conversions.ad_id = A.ad_id ) as number_of_conversions
-    from ad_history A
+    select ad_history.*, account_history.account_name, ad_set_history.ad_set_name, campaign_history.campaign_name, basic_ad.impressions, basic_ad.clicks, basic_ad.spend, basic_ad.date_day, creative_history.creative_name, creative_history.template_page_link,
+    (select count(*) from ad_conversions where ad_conversions.ad_id = ad_history.ad_id ) as number_of_conversions
+    from ad_history
 
-    left join account_history B
-    on A.account_id = B.account_id
-    left join ad_set_history C
-    on A.ad_set_id = C.ad_set_id
-    left join campaign_history D 
-    on A.campaign_id = D.campaign_id
-    left join basic_ad E
-    on A.ad_id = E.ad_id
-    left join creative_history F
-    on A.creative_id = F.creative_id
+    left join account_history
+    on ad_history.account_id = account_history.account_id
+    left join ad_set_history
+    on ad_history.ad_set_id = ad_set_history.ad_set_id
+    left join campaign_history 
+    on ad_history.campaign_id = campaign_history.campaign_id
+    left join basic_ad 
+    on ad_history.ad_id = basic_ad.ad_id
+    left join creative_history
+    on ad_history.creative_id = creative_history.creative_id
 ) 
 
 select *,

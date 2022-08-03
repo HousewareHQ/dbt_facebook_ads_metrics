@@ -14,9 +14,9 @@ metrics:
   dimensions: []
 
 - name: facebook_ads__monthly_ads_by_ad_set
-  label: Facebook Ads Monthly Number of Ads Segmented By Adset
+  label: Facebook Ads Monthly Number of Ads Segmented By ad_set
   model: ref('facebook_ads_main')
-  description: Number of ads running monthly segmented by adset
+  description: Number of ads running monthly segmented by ad_set
   type: count
   sql: ad_id
   timestamp: date_day
@@ -35,10 +35,10 @@ metrics:
   filters: []
   dimensions: [campaign_id]
 
-- name: facebook_ads__monthly_adsets
-  label: Facebook Ads Monthly Number of Adsets
+- name: facebook_ads__monthly_ad_sets
+  label: Facebook Ads Monthly Number of ad_sets
   model: ref('facebook_ads_main')
-  description: Number of adsets running monthly
+  description: Number of ad_sets running monthly
   type: count_distinct
   sql: ad_set_id
   timestamp: date_day
@@ -46,10 +46,10 @@ metrics:
   filters: []
   dimensions: []
 
-- name: facebook_ads__monthly_adsets_by_campaign
-  label: Facebook Ads Monthly Number of Adsets Segmented By Campaign
+- name: facebook_ads__monthly_ad_sets_by_campaign
+  label: Facebook Ads Monthly Number of ad_sets Segmented By Campaign
   model: ref('facebook_ads_main')
-  description: Number of adsets running monthly segmented by campaign
+  description: Number of ad_sets running monthly segmented by campaign
   type: count_distinct
   sql: ad_set_id
   timestamp: date_day
@@ -91,8 +91,8 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_impressions_by_adset
-  label: Facebook Ads Monthly Number of Impressions Segmented By Adset
+- name: facebook_ads__monthly_impressions_by_ad_set
+  label: Facebook Ads Monthly Number of Impressions Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly impressions per ad 
   type: sum
@@ -103,7 +103,7 @@ metrics:
   dimensions: [ad__set_name]
 
 - name: facebook_ads__monthly_impressions_by_campaign
-  label: Facebook Ads Monthly Number of Impressions Segmented By Adset
+  label: Facebook Ads Monthly Number of Impressions Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly impressions per ad 
   type: sum
@@ -135,10 +135,10 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_ad_clicks_by_adset
-  label: Facebook Ads Monthly Number of Ad Clicks Segmented By Adset
+- name: facebook_ads__monthly_ad_clicks_by_ad_set
+  label: Facebook Ads Monthly Number of Ad Clicks Segmented By ad_set
   model: ref('facebook_ads_main')
-  description: Monthly clicks on an ad segmented by adset name
+  description: Monthly clicks on an ad segmented by ad_set name
   type: sum
   sql: clicks
   timestamp: date_day
@@ -190,10 +190,10 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_ad_spend_by_adset
-  label: Facebook Ads Monthly Expenditure For Ads Segmented By Adset
+- name: facebook_ads__monthly_ad_spend_by_ad_set
+  label: Facebook Ads Monthly Expenditure For Ads Segmented By ad_set
   model: ref('facebook_ads_main')
-  description: Monthly spend on ads segmented by adset
+  description: Monthly spend on ads segmented by ad_set
   type: sum
   sql: spend
   timestamp: date_day
@@ -234,10 +234,10 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_cost_per_click_by_adset
-  label: Facebook Ads Monthly Cost Per Ad Click Segmented By Adset
+- name: facebook_ads__monthly_cost_per_click_by_ad_set
+  label: Facebook Ads Monthly Cost Per Ad Click Segmented By ad_set
   model: ref('facebook_ads_main')
-  description: Monthly cost per ad click segmented by adset name
+  description: Monthly cost per ad click segmented by ad_set name
   type: average
   sql: cost_per_click
   timestamp: date_day
@@ -278,10 +278,10 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_cost_per_impression_by_adset
-  label: Facebook Ads Monthly Cost Per Ad Impression Segmented By Adset
+- name: facebook_ads__monthly_cost_per_impression_by_ad_set
+  label: Facebook Ads Monthly Cost Per Ad Impression Segmented By ad_set
   model: ref('facebook_ads_main')
-  description: Monthly cost per ad impression segmented by adset
+  description: Monthly cost per ad impression segmented by ad_set
   type: average
   sql: cost_per_impression
   timestamp: date_day
@@ -323,10 +323,10 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_click_through_rate_by_adset
-  label: Facebook Ads Monthly Click Through Rate Segmented By Adset
+- name: facebook_ads__monthly_click_through_rate_by_ad_set
+  label: Facebook Ads Monthly Click Through Rate Segmented By ad_set
   model: ref('facebook_ads_main')
-  description: Monthly rate of users clicking on ad after viewing segmented by adset name
+  description: Monthly rate of users clicking on ad after viewing segmented by ad_set name
   type: average
   sql: click_through_rate
   timestamp: date_day
@@ -367,10 +367,10 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_conversions_by_adset
-  label: Facebook Ads Monthly Number of Conversions Segmented By Adset
+- name: facebook_ads__monthly_conversions_by_ad_set
+  label: Facebook Ads Monthly Number of Conversions Segmented By ad_set
   model: ref('facebook_ads_main')
-  description: Monthly number of ad conversions segmented by adset name
+  description: Monthly number of ad conversions segmented by ad_set name
   type: sum
   sql: number_of_conversions
   timestamp: date_day
@@ -411,10 +411,10 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_cost_per_conversion_by_adset
-  label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by Adset
+- name: facebook_ads__monthly_cost_per_conversion_by_ad_set
+  label: Facebook Ads Monthly Cost Per Ad Conversion Segmented by ad_set
   model: ref('facebook_ads_main')
-  description: Monthly cost per ad conversion segmented by adset name
+  description: Monthly cost per ad conversion segmented by ad_set name
   type: average
   sql: cost_per_conversion
   timestamp: date_day

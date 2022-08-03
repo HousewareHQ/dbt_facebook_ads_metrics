@@ -7,8 +7,8 @@
 
 select *
 from {{ metrics.metric(
-    metric_name='facebook_ads__monthly_cost_per_impression_by_adset',
+    metric_name='facebook_ads__monthly_ad_sets_by_campaign',
     grain='month',
-    dimensions=['ad_set_name'],
+    dimensions=['campaign_id'],
     secondary_calculations=[]
 ) }}
