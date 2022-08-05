@@ -7,3 +7,369 @@ sources:
     schema: "{{ var('facebook_ads_schema','fivetran_facebook_ads') }}"
     tables:
       - name: AD_CONVERSIONS ## including this table for calculating cost_per_conversion metric
+
+    
+models:
+- name: facebook_ads_transformed
+  tables:
+    - name: dbt_metrics_default_calendar
+      columns:
+        - name: date_day
+          description: ""
+        - name: date_week
+          description: ""
+        - name: date_month
+          description: ""
+        - name: date_quarter
+          description: ""
+        - name: date_year
+          description: ""
+
+    - name: facebook_ads__monthly_ad_clicks
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_ad_clicks
+          description: ""
+
+    - name: facebook_ads__monthly_ad_clicks_by_ad_link
+      columns:
+        - name: period
+          description: ""
+        - name: template_page_link
+          description: ""
+        - name: facebook_ads__monthly_ad_clicks_by_ad_link
+          description: ""
+
+    - name: facebook_ads__monthly_ad_clicks_by_ad_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: facebook_ads__monthly_ad_clicks_by_ad_name
+          description: ""
+
+    - name: facebook_ads__monthly_ad_clicks_by_ad_set
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_ad_clicks_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_ad_clicks_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_ad_clicks_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_ad_sets
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_ad_sets
+          description: ""
+
+    - name: facebook_ads__monthly_ad_sets_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_id
+          description: ""
+        - name: facebook_ads__monthly_ad_sets_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_ad_spend
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_ad_spend
+          description: ""
+
+    - name: facebook_ads__monthly_ad_spend_by_ad_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: facebook_ads__monthly_ad_spend_by_ad_name
+          description: ""
+
+    - name: facebook_ads__monthly_ad_spend_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_ad_spend_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_ad_spend_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_ad_spend_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_ads
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_ads
+          description: ""
+
+    - name: facebook_ads__monthly_ads_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_id
+          description: ""
+        - name: facebook_ads__monthly_ads_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_ads_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_id
+          description: ""
+        - name: facebook_ads__monthly_ads_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_campaigns
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_campaigns
+          description: ""
+
+    - name: facebook_ads__monthly_click_through_rate
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_click_through_rate
+          description: ""
+
+    - name: facebook_ads__monthly_click_through_rate_by_ad_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: facebook_ads__monthly_click_through_rate_by_ad_name
+          description: ""
+
+    - name: facebook_ads__monthly_click_through_rate_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_click_through_rate_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_click_through_rate_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_click_through_rate_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_conversions
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_conversions
+          description: ""
+
+    - name: facebook_ads__monthly_conversions_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_conversions_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_conversions_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_conversions_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_click
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_cost_per_click
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_click_by_ad_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_click_by_ad_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_click_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_click_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_click_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_click_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_conversion
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_cost_per_conversion
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_conversion_by_ad_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_conversion_by_ad_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_conversion_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_conversion_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_conversion_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_conversion_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_impression
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_cost_per_impression
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_impression_by_ad_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_impression_by_ad_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_impression_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_impression_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_cost_per_impression_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_cost_per_impression_by_campaign_name
+          description: ""
+
+    - name: facebook_ads__monthly_impressions
+      columns:
+        - name: period
+          description: ""
+        - name: facebook_ads__monthly_impressions
+          description: ""
+
+    - name: facebook_ads__monthly_impressions_by_ad_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: facebook_ads__monthly_impressions_by_ad_name
+          description: ""
+
+    - name: facebook_ads__monthly_impressions_by_ad_set_name
+      columns:
+        - name: period
+          description: ""
+        - name: ad_set_name
+          description: ""
+        - name: facebook_ads__monthly_impressions_by_ad_set_name
+          description: ""
+
+    - name: facebook_ads__monthly_impressions_by_campaign_name
+      columns:
+        - name: period
+          description: ""
+        - name: campaign_name
+          description: ""
+        - name: facebook_ads__monthly_impressions_by_campaign_name
+          description: ""
+
+    - name: facebook_ads_main
+      columns:
+        - name: ad_id
+          description: ""
+        - name: account_id
+          description: ""
+        - name: ad_set_id
+          description: ""
+        - name: campaign_id
+          description: ""
+        - name: creative_id
+          description: ""
+        - name: ad_name
+          description: ""
+        - name: is_most_recent_record
+          description: ""
+        - name: account_name
+          description: ""
+        - name: number_of_conversions
+          description: ""
+        - name: cost_per_impression
+          description: ""
+        - name: cost_per_click
+          description: ""
+        - name: cost_per_conversion
+          description: ""
+        - name: click_through_rate
+          description: ""
