@@ -6,17 +6,17 @@ version: '1.0.0'
 
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
-
-profile: 'facebook_ads_metrics'
+#add custom schema by removing comment
+#profile: 'your custom profile'
 
 models:
   facebook_ads_metrics:
      +materialized: table
 
 vars:
-
-  facebook_ads_schema: TEST_FACEBOOK_ADS
-  facebook_ads_database: HOUSEWARE_HOUSEWARE
+  #remove the comment to use custom schemas
+  #facebook_ads_schema: YOUR_CUSTOM_SCHEMA
+  #facebook_ads_database: YOUR CUSTOM_DATABASE
   
   facebook_ads_metrics:
     account_history: "{{ ref('stg_facebook_ads__account_history') }}"
