@@ -1,7 +1,7 @@
 # Facebook Ads Metrics dbt Package ([Docs](https://housewarehq.github.io/dbt_facebook_ads_metrics))
 
 # 📣 What does this dbt package do?
-This package provides pre-built metrics for Facebook ads data from [Fivetran's connector](https://fivetran.com/docs/applications/facebook_ads). It uses data in the format described by [this ERD](https://fivetran.com/docs/applications/facebook_ads#schemainformation).
+This package provides pre-built metrics for Facebook ads data from [Fivetran's connector](https://fivetran.com/docs/applications/facebook-ads). It uses data in the format described by [this ERD](https://fivetran.com/docs/applications/facebook_ads#schemainformation).
 
 This package enables you to access commonly used metrics on top of Facebook Ads Data
 
