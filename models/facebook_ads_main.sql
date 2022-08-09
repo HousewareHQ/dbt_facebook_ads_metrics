@@ -3,22 +3,22 @@
 
 with account_history as (
     select *
-    from {{ var("account_history") }}
+    from {{ var("account_history") }} where is_most_recent_record = {{ var("is_most_recent_toggle") }}
 ), ad_history as (
     select *
-    from {{ var("ad_history") }}
+    from {{ var("ad_history") }} where is_most_recent_record = {{ var("is_most_recent_toggle") }}
 ), ad_set_history as (
     select *
-    from {{ var("ad_set_history") }}
+    from {{ var("ad_set_history") }} where is_most_recent_record = {{ var("is_most_recent_toggle") }}
 ), basic_ad as (
     select *
     from {{ var("basic_ad") }}
 ), campaign_history as (
     select *
-    from {{ var("campaign_history") }}
+    from {{ var("campaign_history") }} where is_most_recent_record = {{ var("is_most_recent_toggle") }}
 ), creative_history as (
     select *
-    from {{ var("creative_history") }}
+    from {{ var("creative_history") }} where is_most_recent_record = {{ var("is_most_recent_toggle") }}
 ), ad_conversions as(
     select * from {{source('facebook_ads_source','AD_CONVERSIONS')}}
 ), source as ( 

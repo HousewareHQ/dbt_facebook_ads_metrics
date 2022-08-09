@@ -29,7 +29,7 @@ Note that all the metrics contain extended metrics for segmentation based on cam
 # 🎯 How do I use the dbt package?
 ## Step 1: Prerequisites
 To use this dbt package, you must have the following:
-- At least one Fivetran intercom connector syncing data into your destination. 
+- At least one Fivetran Facebook Ads connector syncing data into your destination. 
 - A **BigQuery**, **Snowflake**, **Redshift**, or **PostgreSQL** destination.
 
 
@@ -47,7 +47,7 @@ packages:
 
 ## Step 3: Define database and schema variables
 
-By default, this package will look for your Facebook Ads data in the `fivetran_facebook_ads` schema of your [target database](https://docs.getdbt.com/docs/running-a-dbt-project/using-the-command-line-interface/configure-your-profile). If this is not where your Intercom data is, please add the following configuration to your `dbt_project.yml` file:
+By default, this package will look for your Facebook Ads data in the `fivetran_facebook_ads` schema of your [target database](https://docs.getdbt.com/docs/running-a-dbt-project/using-the-command-line-interface/configure-your-profile). If this is not where your Facebook Ads data is, please add the following configuration to your `dbt_project.yml` file:
 
 ```yml
 # dbt_project.yml
@@ -56,9 +56,8 @@ By default, this package will look for your Facebook Ads data in the `fivetran_f
 config-version: 2
 
 vars:
-  intercom_source:
-    facebook_ads_database: your_database_name
-    facebook_ads_schema: your_schema_name
+  facebook_ads_database: your_database_name
+  facebook_ads_schema: your_schema_name
 ```
 
 For additional configurations for the source models, please visit the [Facebook Ads source package](https://github.com/fivetran/dbt_facebook_ads_source).
