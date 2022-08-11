@@ -22,7 +22,7 @@ metrics:
   timestamp: date_day
   time_grains: [month]
   filters: []
-  dimensions: [ad_set_id]
+  dimensions: [ad_set_name]
 
 - name: facebook_ads__monthly_ads_by_campaign_name
   label: Facebook Ads Monthly Number of Ads Segmented By Campaign
@@ -33,7 +33,7 @@ metrics:
   timestamp: date_day
   time_grains: [month]
   filters: []
-  dimensions: [campaign_id]
+  dimensions: [campaign_name]
 
 - name: facebook_ads__monthly_ad_sets
   label: Facebook Ads Monthly Number of ad_sets
@@ -55,7 +55,7 @@ metrics:
   timestamp: date_day
   time_grains: [month]
   filters: []
-  dimensions: [campaign_id]
+  dimensions: [campaign_name]
 
 
 - name: facebook_ads__monthly_campaigns
@@ -100,7 +100,7 @@ metrics:
   timestamp: date_day
   time_grains: [month]
   filters: []
-  dimensions: [ad__set_name]
+  dimensions: [ad_set_name]
 
 - name: facebook_ads__monthly_impressions_by_campaign_name
   label: Facebook Ads Monthly Number of Impressions Segmented By ad_set
@@ -111,7 +111,7 @@ metrics:
   timestamp: date_day
   time_grains: [month]
   filters: []
-  dimensions: [ad__set_name]
+  dimensions: [ad_set_name]
 
 - name: facebook_ads__monthly_ad_clicks
   label: Facebook Ads Monthly Number of Ad Clicks

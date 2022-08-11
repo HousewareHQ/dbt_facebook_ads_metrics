@@ -9,6 +9,6 @@ select *
 from {{ metrics.metric(
     metric_name='facebook_ads__monthly_ads_by_campaign_name',
     grain='month',
-    dimensions=['campaign_id'],
+    dimensions=['campaign_name'],
     secondary_calculations=[]
 ) }}
