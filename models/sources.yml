@@ -6,7 +6,7 @@ sources:
     database: "{{ var('facebook_ads_database', target.database) }}"
     schema: "{{ var('facebook_ads_schema','fivetran_facebook_ads') }}"
     tables:
-      - name: AD_CONVERSIONS ## including this table for calculating cost_per_conversion metric
+      - name: ad_conversion ## including this table for calculating cost_per_conversion metric
 
     
 models:
