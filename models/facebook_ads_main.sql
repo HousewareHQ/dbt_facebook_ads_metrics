@@ -19,11 +19,11 @@ with account_history as (
 ), creative_history as (
     select *
     from {{ var("creative_history") }} where is_most_recent_record = {{ var("is_most_recent_toggle") }}
-), ad_conversions as(
-    select * from {{source('facebook_ads_source','AD_CONVERSIONS')}}
+), ad_conversion as(
+    select * from {{source('facebook_ads_source','ad_conversion')}}
 ), source as ( 
     select ad_history.*, account_history.account_name, ad_set_history.ad_set_name, campaign_history.campaign_name, basic_ad.impressions, basic_ad.clicks, basic_ad.spend, basic_ad.date_day, creative_history.creative_name, creative_history.template_page_link,
-    (select count(*) from ad_conversions where ad_conversions.ad_id = ad_history.ad_id ) as number_of_conversions
+    (select count(*) from ad_conversion where ad_conversion.ad_id = ad_history.ad_id ) as number_of_conversions
     from ad_history
 
     left join account_history
