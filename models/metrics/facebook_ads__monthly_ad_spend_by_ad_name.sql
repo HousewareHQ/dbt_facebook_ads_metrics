@@ -6,8 +6,8 @@
 {{ config(materialized = 'table') }}
 
 select *
-from {{ metrics.metric(
-    metric_name='facebook_ads__monthly_ad_spend_by_ad_name',
+from {{ metrics.calculate(
+    metric('facebook_ads__monthly_ad_spend_by_ad_name'),
     grain='month',
     dimensions=['ad_name'],
     secondary_calculations=[]

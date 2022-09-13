@@ -15,7 +15,7 @@ models:
 
 vars:
   #remove the comment to use custom schemas
-  #facebook_ads_schema: YOUR_CUSTOM_SCHEMA
+  facebook_ads_schema: TEST_FACEBOOK_ADS
   #facebook_ads_database: YOUR CUSTOM_DATABASE
 
   facebook_ads_metrics:
