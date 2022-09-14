@@ -22,7 +22,7 @@ with account_history as (
 ), ad_conversion as(
     select * from {{source('facebook_ads_source','ad_conversion')}}
 ), source as ( 
-    select ad_history.*, account_history.account_name, ad_set_history.ad_set_name, campaign_history.campaign_name, basic_ad.impressions, basic_ad.clicks, basic_ad.spend, basic_ad.date_day, creative_history.creative_name, creative_history.template_page_link,
+    select ad_history.*, account_history.account_name, ad_set_history.ad_set_name, campaign_history.campaign_name, basic_ad.impressions, basic_ad.clicks, basic_ad.spend, basic_ad.date_day as date, creative_history.creative_name, creative_history.template_page_link,
     (select count(*) from ad_conversion where ad_conversion.ad_id = ad_history.ad_id ) as number_of_conversions
     from ad_history
 
