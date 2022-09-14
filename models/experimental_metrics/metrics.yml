@@ -1,0 +1,14 @@
+version: 2
+sources: []
+models: []
+metrics:
+- name: experimental_facebook_ads__monthly_click_through_rate
+  label: Average Revenue Per Customer
+  description: Monthly rate of users clicking on ad after viewing
+
+  type: expression
+  sql: "{{metric('facebook_ads__monthly_ad_clicks')}} / {{metric('facebook_ads__monthly_impressions')}}"
+
+  timestamp: date
+  time_grains: [month]
+  dimensions: []
