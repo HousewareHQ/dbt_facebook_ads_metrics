@@ -2,9 +2,20 @@ version: 2
 sources: []
 models: []
 metrics:
+# - name: experimental_facebook_ads__all_time_impressions
+#   label: All time facebook ads impressions
+#   description: Fb ads impressions til date
+#   model: ref('facebook_ads_main')
+#   type: sum
+#   sql: impressions
+
+#   timestamp: date
+#   time_grains: [all_time]
+#   dimensions: []
+
 - name: experimental_facebook_ads__monthly_click_through_rate
-  label: Average Revenue Per Customer
-  description: Monthly rate of users clicking on ad after viewing
+  label: exp_ctr
+  description: exp ctr
 
   type: expression
   sql: "{{metric('facebook_ads__monthly_ad_clicks')}} / {{metric('facebook_ads__monthly_impressions')}}"
@@ -12,3 +23,26 @@ metrics:
   timestamp: date
   time_grains: [month]
   dimensions: []
+
+- name: experimental_facebook_ads__monthly_cpc
+  label: exp_cpc
+  description: exp cpc
+
+  type: expression
+  sql: "{{metric('facebook_ads__monthly_ad_spend')}} / {{metric('facebook_ads__monthly_ad_clicks')}}"
+
+  timestamp: date
+  time_grains: [month]
+  dimensions: []
+
+- name: experimental_facebook_ads__monthly_cpc
+  label: exp_cpc
+  description: exp cpc
+
+  type: expression
+  sql: "{{metric('facebook_ads__monthly_ad_spend')}} / {{metric('facebook_ads__monthly_ad_clicks')}}"
+
+  timestamp: date
+  time_grains: [month]
+  dimensions: []
+
