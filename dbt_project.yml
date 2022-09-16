@@ -12,16 +12,14 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 #toggle metrics: +enabled: false if you don't want to materialize metrics as tables
 models:
   facebook_ads_metrics:
-    experimental_metrics:
-      +enabled: true
-      +materialized: table
     metrics:
       +enabled: true
       +materialized: table
 
 vars:
   #remove the comment to use custom schemas
-  #facebook_ads_schema: YOUR_CUSTOM_SCHEMA
+  #facebook_ads_schema: TEST_FACEBOOK_ADS
+
   #facebook_ads_database: YOUR_CUSTOM_DATABASE
 
   facebook_ads_metrics:
