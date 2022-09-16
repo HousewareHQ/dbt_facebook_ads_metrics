@@ -9,14 +9,18 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 #add custom schema by removing comment
 #profile: 'your custom profile'
 
+#toggle metrics: +enabled: false if you don't want to materialize metrics as tables
 models:
   facebook_ads_metrics:
-     +materialized: table
+    metrics:
+      +enabled: true
+      +materialized: table
 
 vars:
   #remove the comment to use custom schemas
-  #facebook_ads_schema: YOUR_CUSTOM_SCHEMA
-  #facebook_ads_database: YOUR CUSTOM_DATABASE
+  #facebook_ads_schema: TEST_FACEBOOK_ADS
+
+  #facebook_ads_database: YOUR_CUSTOM_DATABASE
 
   facebook_ads_metrics:
     #toggle is set to true to only include recent records of a particular ad, adset
