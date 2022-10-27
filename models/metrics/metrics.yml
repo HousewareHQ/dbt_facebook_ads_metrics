@@ -241,7 +241,6 @@ metrics:
   
   calculation_method: derived
   expression: "{{metric('facebook_ads__monthly_ad_spend_by_ad_set_name')}} / {{metric('facebook_ads__monthly_ad_clicks_by_ad_set_name')}}"
-  
   timestamp: date
   time_grains: [month]
   filters: []
@@ -333,7 +332,6 @@ metrics:
 
   calculation_method: derived
   expression: "{{metric('facebook_ads__monthly_ad_clicks_by_ad_set_name')}} / {{metric('facebook_ads__monthly_impressions_by_ad_set_name')}}"
-
   timestamp: date
   time_grains: [month]
   dimensions: [ad_set_name]
