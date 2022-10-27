@@ -135,7 +135,7 @@ metrics:
   filters: []
   dimensions: [ad_name]
 
-- name: facebook_ads__monthly_ad_clicks_by_ad_set
+- name: facebook_ads__monthly_ad_clicks_by_ad_set_name
   label: Facebook Ads Monthly Number of Ad Clicks Segmented By ad_set
   model: ref('facebook_ads_main')
   description: Monthly clicks on an ad segmented by ad_set name
@@ -240,8 +240,7 @@ metrics:
   description: Monthly cost per ad click segmented by ad_set name
   
   calculation_method: derived
-  expression: "{{metric('facebook_ads__monthly_ad_spend_by_ad_set_name')}} / {{metric('facebook_ads__monthly_ad_clicks_by_ad_set')}}"
-  
+  expression: "{{metric('facebook_ads__monthly_ad_spend_by_ad_set_name')}} / {{metric('facebook_ads__monthly_ad_clicks_by_ad_set_name')}}"
   timestamp: date
   time_grains: [month]
   filters: []
@@ -332,8 +331,7 @@ metrics:
   description: Monthly rate of users clicking on ad after viewing segmented by ad set name
 
   calculation_method: derived
-  expression: "{{metric('facebook_ads__monthly_ad_clicks_by_ad_set')}} / {{metric('facebook_ads__monthly_impressions_by_ad_set_name')}}"
-
+  expression: "{{metric('facebook_ads__monthly_ad_clicks_by_ad_set_name')}} / {{metric('facebook_ads__monthly_impressions_by_ad_set_name')}}"
   timestamp: date
   time_grains: [month]
   dimensions: [ad_set_name]
